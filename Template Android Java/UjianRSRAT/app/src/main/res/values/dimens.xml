@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_login_absensi">64dp</dimen>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="button_size_small">48dp</dimen>
+    <dimen name="button_margin">12dp</dimen>
+    <dimen name="button_size_big">64dp</dimen>
+
+    <!-- Size Untuk ScreenWidthDp 400dp keatas  -->
+    <dimen name="marginEnd_number_count">32dp</dimen>
+    <dimen name="button_presensi_400_dp">120dp</dimen>
+    <dimen name="text_size_agreement_400dp">18dp</dimen>
+    <dimen name="textsize_button_presensi_400dp">22sp</dimen>
+    <dimen name="textsize_title_app_400dp">24sp</dimen>
+    <dimen name="textsize_user_400dp">24sp</dimen>
+    <dimen name="textsize_hasil_eprens_400dp">12sp</dimen>
+    <dimen name="textsize_info_accept_400dp">18sp</dimen>
+    <dimen name="textsize_number_count_400dp">120sp</dimen>
+    <dimen name="button_photo_selfie_400dp">84dp</dimen>
+    <dimen name="layout_height_400dp">100dp</dimen>
+    <dimen name="height_actionbar_400dp">48dp</dimen>
+    <dimen name="height_zxing_qr_scanner_400dp">200dp</dimen>
+    <dimen name="textsize_textview_400dp">12sp</dimen>
+    <dimen name="text_size_button_kembali_400dp">9sp</dimen>
+    <dimen name="width_image_hasil_400dp">100dp</dimen>
+    <dimen name="height_image_hasil_400dp">125dp</dimen>
+    <dimen name="width_number_count_400dp">150dp</dimen>
+    <dimen name="width_button_hasil_presensi_400dp">150dp</dimen>
+
+    <!-- Size Untuk ScreenWidthDp 360dp keatas sampai kurang dari 400dp   -->
+    <dimen name="button_presensi_360_dp">120dp</dimen>
+    <dimen name="text_size_agreement_360dp">16sp</dimen>
+    <dimen name="textsize_button_presensi_360dp">18sp</dimen>
+    <dimen name="textsize_title_app_360dp">18sp</dimen>
+    <dimen name="textsize_user_360dp">18sp</dimen>
+    <dimen name="textsize_hasil_eprens_360dp">12sp</dimen>
+    <dimen name="textsize_info_accept_360dp">12sp</dimen>
+    <dimen name="textsize_number_count_360dp">96sp</dimen>
+    <dimen name="button_photo_selfie_360dp">84dp</dimen>
+    <dimen name="layout_height_360dp">100dp</dimen>
+    <dimen name="height_actionbar_360dp">48dp</dimen>
+    <dimen name="height_zxing_qr_scanner_360dp">200dp</dimen>
+    <dimen name="textsize_textview_360dp">12sp</dimen>
+    <dimen name="text_size_button_kembali_360dp">9sp</dimen>
+    <dimen name="width_image_hasil_360dp">100dp</dimen>
+    <dimen name="height_image_hasil_360dp">125dp</dimen>
+    <dimen name="width_number_count_360dp">150dp</dimen>
+    <dimen name="width_button_hasil_presensi_360dp">100dp</dimen>
+
+    <!-- Size Untuk ScreenWidthDp 320dp keatas sampai 360dp   -->
+    <dimen name="button_presensi_320_dp">120dp</dimen>
+    <dimen name="text_size_agreement_320dp">11dp</dimen>
+    <dimen name="textsize_button_presensi_320dp">18sp</dimen>
+    <dimen name="textsize_title_app_320dp">18sp</dimen>
+    <dimen name="textsize_user_320dp">18sp</dimen>
+    <dimen name="textsize_hasil_eprens_320dp">10dp</dimen>
+    <dimen name="textsize_info_accept_320dp">12sp</dimen>
+    <dimen name="textsize_number_count_320dp">96sp</dimen>
+    <dimen name="button_photo_selfie_320dp">84dp</dimen>
+    <dimen name="layout_height_320dp">100dp</dimen>
+    <dimen name="height_actionbar_320dp">48dp</dimen>
+    <dimen name="height_zxing_qr_scanner_320dp">200dp</dimen>
+    <dimen name="textsize_textview_320dp">12sp</dimen>
+    <dimen name="text_size_button_kembali_320dp">9sp</dimen>
+    <dimen name="width_image_hasil_320dp">100dp</dimen>
+    <dimen name="height_image_hasil_320dp">125dp</dimen>
+    <dimen name="width_number_count_320dp">150dp</dimen>
+    <dimen name="width_button_hasil_presensi_320dp">100dp</dimen>
+
+    <!-- Size Untuk ScreenWidthDp 240dp keatas sampai kurang dari 320dp   -->
+    <dimen name="button_presensi_240_dp">81dp</dimen>
+    <dimen name="text_size_agreement_240dp">9dp</dimen>
+    <dimen name="textsize_button_presensi_240dp">12sp</dimen>
+    <dimen name="textsize_title_app_240dp">12sp</dimen>
+    <dimen name="textsize_user_240dp">14sp</dimen>
+    <dimen name="textsize_hasil_eprens_240dp">10sp</dimen>
+    <dimen name="textsize_info_accept_240dp">12sp</dimen>
+    <dimen name="textsize_number_count_240dp">75sp</dimen>
+    <dimen name="button_photo_selfie_240dp">64dp</dimen>
+    <dimen name="layout_height_240dp">100dp</dimen>
+    <dimen name="height_actionbar_240dp">48dp</dimen>
+    <dimen name="height_zxing_qr_scanner_240dp">200dp</dimen>
+    <dimen name="textsize_textview_240dp">12sp</dimen>
+    <dimen name="text_size_button_kembali_240dp">9sp</dimen>
+    <dimen name="width_image_hasil_240dp">100dp</dimen>
+    <dimen name="height_image_hasil_240dp">125dp</dimen>
+    <dimen name="width_number_count_240dp">150dp</dimen>
+    <dimen name="width_button_hasil_presensi_240dp">75dp</dimen>
+
+</resources>

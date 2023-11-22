@@ -1,0 +1,191 @@
+{
+	"info": {
+		"_postman_id": "191af2fe-8a88-4fb1-b5f5-92071d6d8ea4",
+		"name": "Test RS RAT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5818949",
+		"_collection_link": "https://red-eclipse-770984.postman.co/workspace/Team-Workspace~c2bb0d31-2d80-4586-870e-3ca9bab5bb55/collection/5818949-191af2fe-8a88-4fb1-b5f5-92071d6d8ea4?action=share&source=collection_link&creator=5818949"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "123@mail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://android.simetris.net/index.php/services/ambulance/login",
+							"protocol": "http",
+							"host": [
+								"android",
+								"simetris",
+								"net"
+							],
+							"path": [
+								"index.php",
+								"services",
+								"ambulance",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get All faskes",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://android.simetris.net/index.php/services/ambulance/getFaskesAll",
+							"protocol": "http",
+							"host": [
+								"android",
+								"simetris",
+								"net"
+							],
+							"path": [
+								"index.php",
+								"services",
+								"ambulance",
+								"getFaskesAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get Faskes user",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "uuid",
+									"value": "c82ac2f6-b6c0-4c4b-a373-871ea4495f99",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://android.simetris.net/index.php/services/ambulance/getFaskesku",
+							"protocol": "http",
+							"host": [
+								"android",
+								"simetris",
+								"net"
+							],
+							"path": [
+								"index.php",
+								"services",
+								"ambulance",
+								"getFaskesku"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "ad@a.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456789",
+									"type": "text"
+								},
+								{
+									"key": "nama",
+									"value": "ady pamungkas",
+									"type": "text"
+								},
+								{
+									"key": "hp",
+									"value": "08123456789",
+									"type": "text"
+								},
+								{
+									"key": "faskes_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://android.simetris.net/index.php/services/ambulance/register",
+							"protocol": "http",
+							"host": [
+								"android",
+								"simetris",
+								"net"
+							],
+							"path": [
+								"index.php",
+								"services",
+								"ambulance",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
