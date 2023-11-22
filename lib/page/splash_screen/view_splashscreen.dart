@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:test_rs_rat/page/auth/auth/view_login.dart';
+import 'package:test_rs_rat/page/auth/view_login.dart';
 
 import '../main_page/view_main_page.dart';
 
@@ -39,12 +39,12 @@ class _ViewSplashScreenState extends State<ViewSplashScreen> {
   routeLogin() async {
    String? token;
    //token = await getUserId() ??"undefined";
-    setState(() {
-      _token = token;
-    });
+   // setState(() {
+   //   _token = token;
+   // });
     if (_token == null || _token == "undefined") {
 
-      ViewLoginPage.pushReplacement(context);
+      ViewMainPage.pushReplacement(context);
     } else {
       ViewMainPage.pushReplacement(context);
     }

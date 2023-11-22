@@ -1,6 +1,11 @@
+import 'dart:convert';
+
+import 'package:custom_searchable_dropdown/custom_searchable_dropdown.dart';
+import 'package:dio/dio.dart';
+import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/material.dart';
 //import 'package:search_choices/search_choices.dart';
-import 'package:test_rs_rat/page/auth/auth/view_login.dart';
+import 'package:test_rs_rat/page/auth/view_login.dart';
 
 import '../../../common/view_component/gap.dart';
 import '../../../common/view_component/sis_buttons.dart';
@@ -44,7 +49,8 @@ class _ViewRegisterPageState extends State<ViewRegisterPage> {
   bool isEmptyRegPhone = true;
   bool _isAuthenticating = false;
   var choosedFaskes;
-  List<dynamic>? dataFaskes ;
+  var dropdownValue;
+  var dataFaskes ;
 
   @override
   void initState() {
@@ -65,11 +71,12 @@ class _ViewRegisterPageState extends State<ViewRegisterPage> {
     registerPhoneController = TextEditingController()
       ..addListener(() {        setState(() {isEmptyRegPhone = registerPhoneController.text.isEmpty;});
       });
+    getAllFaskes();
   }
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
-    return  Scaffold(body: Column(
+    return  Scaffold(body: SingleChildScrollView(child: Column(
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
@@ -106,14 +113,43 @@ class _ViewRegisterPageState extends State<ViewRegisterPage> {
           width: size.width *0.9,
           child: SisTextField(text: "Password", textInputType: TextInputType.visiblePassword,  obscureText: true, icon: Icons.lock, controller: registerPasswordController , ),
         ),
-
+        GapV(10),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text14SpBold(text: "Pilih Asal Faskes : "),
-             dataFaskes!=null ?
-             dataFaskes!.isNotEmpty ?
-           /* SearchChoices.single(
+            dataFaskes!=null ?
+            dataFaskes!.isNotEmpty ?
+            Container(
+              width: MediaQuery.of(context).size.width *0.85,
+              child:   CustomSearchableDropDown(
+                items: dataFaskes!,
+                label: 'Select Name',
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.blue
+                    )
+                ),
+                prefixIcon:  Padding(
+                  padding: const EdgeInsets.all(0.0),
+                  child: Icon(Icons.search),
+                ),
+                dropDownMenuItems: dataFaskes?.map((item) {
+                  return item.mf_nama;
+                }).toList() ??
+                    [],
+                onChanged: (value){
+                  if(value!=null)
+                  {
+                    choosedFaskes = value;
+                    print(jsonEncode(choosedFaskes));
+                  }
+                  else{
+                    choosedFaskes=null;
+                  }
+                },
+              ),)
+            /* SearchChoices.single(
               items: dataFaskes!
                   .map(
                     (e) => DropdownMenuItem(
@@ -139,7 +175,7 @@ class _ViewRegisterPageState extends State<ViewRegisterPage> {
                 });
               },
               isExpanded: true,
-            )*/ Container(): Container() : Container(),
+            )*/ : Container() : Container(),
           ],) ,
         GapV(20),
         Center(child:
@@ -162,89 +198,16 @@ class _ViewRegisterPageState extends State<ViewRegisterPage> {
         Text16SpMedium(text: "Sudah Punya Akun?"),
         InkWell(child:     Text20SpBold(text: "Login", color: Colors.blue,), onTap: (){ViewLoginPage.push(context);},)
       ],
-    ),);
+    ),),);
   }
 
   Future<void> registerAction() async {
-   /* setState(() {
-      _isAuthenticating = true;
-    });
-    String _nama = registerNamaController.text;
-    String _email = registerEmailController.text;
-    String _hp = registerPhoneController.text;
-    String _username = registerEmailController.text;
-    String _pass = registerPasswordController.text;
-    String _passConfirm = registerPasswordConfirmController.text;
-    RestClientApiApp api = RestClientApiApp(Dio());
-    print(" $_username, $_pass");
 
-    await api
-        .register("application/json", _email, _pass,_nama, _hp, choosedFaskes!.mf_id!, "uut_selly" )
-        .then((it) async {
-      print("${jsonEncode(it)}");
-      setState(() {
-        _isAuthenticating = false;
-      });
-      if (it.status!) {
-        SisToast.showToast(it.msg?? "Berhasil Register");
-        setState(() {
-          _isAuthenticating = false;
-        });
-        _choosed=0;
-        *//* await saveToken("token");
-        await saveUser(it.data);
-        await saveUserID("name");
-
-        String? _token = await getUserId();
-        if(_token!=null){
-          ViewMainPage.pushReplacement(context);
-        }else{
-          await saveToken(it.data!.tr_uuid);
-          await saveUser(it.data);
-          ViewMainPage.pushReplacement(context);
-        }*//*
-      } else {
-        SisToast.showToast(it.msg?? "Terjadi Kesalahan, Silahkan coba lagi");
-      }
-    }).catchError((e) {
-      setState(() {
-        _isAuthenticating = false;
-      });
-      print("Exception ${e.toString()}");
-      SisToast.showToast("Terjadi Kesalahan, Silahkan coba lagi.");
-    });*/
   }
 
  // List<FaskesModel>? dataFaskes;
   Future<void> getAllFaskes() async {
-/*    setState(() {
-      _isLoading = true;
-    });
-    RestClientApiApp api = RestClientApiApp(Dio());
-    await api
-        .getFaskesAll("application/json")
-        .then((it) async {
-      print("${jsonEncode(it)}");
-      setState(() {
-        _isLoading = false;
-      });
-      if (it.status!) {
-        print(jsonEncode(it.data));
-        setState(() {
-          dataFaskes = it.data;
-        });
-      } else {
-        setState(() {
-          dataFaskes = [];
-        });
-      }
-    }).catchError((e) {
-      dataFaskes = [];
-      setState(() {
-        _isLoading = false;
-      });
-      print("Exception ${e.toString()}");
-      SisToast.showToast("Terjadi Kesalahan, Silahkan coba lagi.");
-    });*/
+
   }
+
 }

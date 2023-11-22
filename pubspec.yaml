@@ -6,7 +6,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.17.0-222.0.dev <3.0.0"
+  sdk: ">=2.12.0 <3.0.0"
 
 dependencies:
   dio: ^4.0.4
@@ -16,13 +16,16 @@ dependencies:
   shared_preferences: ^2.0.13
   permission_handler: ^10.3.0
   toggle_switch: ^2.1.0
-  #search_choices: ^2.2.0
   json_serializable: ^6.1.1
   json_annotation: any
   intl: ^0.17.0
   fluttertoast: ^8.0.9
   google_fonts: ^2.2.0
-
+  cached_network_image: ^3.2.1
+  dropdown_search: ^5.0.6
+  #search_choices: ^2.1.7
+  #flutter_searchable_dropdown: ^1.2.1
+  custom_searchable_dropdown: ^2.1.1
   flutter:
     sdk: flutter
 

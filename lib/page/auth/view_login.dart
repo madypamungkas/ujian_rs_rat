@@ -2,15 +2,14 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:test_rs_rat/page/auth/auth/view_register.dart';
-
-import '../../../common/view_component/gap.dart';
-import '../../../common/view_component/sis_buttons.dart';
-import '../../../common/view_component/sis_color.dart';
-import '../../../common/view_component/sis_textField.dart';
-import '../../../common/view_component/sis_texts.dart';
-import '../../../common/view_component/sistoast.dart';
-import '../../main_page/view_main_page.dart';
+import 'package:test_rs_rat/page/auth/view_register.dart';
+import '../../common/view_component/gap.dart';
+import '../../common/view_component/sis_buttons.dart';
+import '../../common/view_component/sis_color.dart';
+import '../../common/view_component/sis_textField.dart';
+import '../../common/view_component/sis_texts.dart';
+import '../../common/view_component/sistoast.dart';
+import '../main_page/view_main_page.dart';
 
 class ViewLoginPage extends StatefulWidget {
   const ViewLoginPage({Key? key}) : super(key: key);
@@ -121,37 +120,6 @@ class _ViewLoginPageState extends State<ViewLoginPage> {
    // RestClientApiApp api = RestClientApiApp(Dio());
     print(" $_username, $_pass");
 
-   /* await api
-        .login("application/json", _username, _pass,"uut_selly")
-        .then((it) async {
-      print("${jsonEncode(it)}");
-      setState(() {
-        _isAuthenticating = false;
-      });
-      if (it.status!) {
-        SisToast.showToast(it.msg?? "Berhasil Login");
-        await saveToken("token");
-        await saveUser(it.data);
-        await saveUserID("name");
 
-        String? _token = await getUserId();
-        if(_token!=null){
-          ViewMainPage.pushReplacement(context);
-        }else{
-          await saveToken(it.data!.tr_uuid);
-          await saveUser(it.data);
-          await saveUserID(it.data!.tr_id);
-          ViewMainPage.pushReplacement(context);
-        }
-      } else {
-        SisToast.showToast(it.msg?? "Terjadi Kesalahan, Silahkan coba lagi");
-      }
-    }).catchError((e) {
-      setState(() {
-        _isAuthenticating = false;
-      });
-      print("Exception ${e.toString()}");
-      SisToast.showToast("Terjadi Kesalahan, Silahkan coba lagi.");
-    });*/
   }
 }
